@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ДЗ Модуль 22</title>
+</head>
+<body>
+    <div class="module">
+        <h2>
+            Задание 1.Изобразить с помощью элементов SVG флаги пяти стран: Россия, Франция, Финляндия, Швейцария, Япония.
+            Каждый SVG-элемент с флагом должен иметь размер 180 на 120 пикселей.
+        </h2>
+    <div class="flex">
+            <div class="flex__item">
+            <h3>Флаг России</h3>
+    <svg width="180" height="120">
+        <polyline 
+            style="fill:none;stroke:white;stroke-width:40;"
+            points="0,20 180,20"/>
+        <polyline 
+            style="fill:none;stroke:blue;stroke-width:40;"
+            points="0,60 180,60"/>
+        <polyline 
+            style="fill:none;stroke:red;stroke-width:40;"
+            points="0,100 180,100"/>
+    </svg>
+    </div>
+<div class="flex__item">
+    <h3>Флаг Франции</h3>
+    <svg width="180" height="120">
+        <polyline 
+            style="fill:none;stroke:blue;stroke-width:60;"
+            points="30,0 30,120"
+        />
+        <polyline 
+            style="fill:none;stroke:white;stroke-width:60;"
+            points="90,0 90,120"
+        />
+        <polyline 
+            style="fill:none;stroke:red;stroke-width:60;"
+            points="150,0 150,120"
+        />
+    </svg>
+    </div>
+<div class="flex__item">
+    <h3>Флаг Финляндии</h3>
+    <svg width="180" height="120">
+        <polyline 
+            style="fill:none;stroke:white;stroke-width:120;"
+            points="0,60 180,60"
+        />
+        <polyline 
+            style="fill:none;stroke:blue;stroke-width:40;"
+            points="0,60 180,60"
+        />
+        <polyline 
+            style="fill:none;stroke:blue;stroke-width:40;"
+            points="60,0 60,180"
+        />
+    </svg>
+</div>
+<div class="flex__item">
+    <h3>Флаг Швейцарии</h3>
+    <svg width="180" height="120">
+        <polyline 
+            style="fill:none;stroke:red;stroke-width:120;"
+            points="0,60 180,60"
+        />
+        <polyline 
+            style="fill:none;stroke:white;stroke-width:30;"
+            points="40,60 140,60"
+        />
+        <polyline 
+            style="fill:none;stroke:white;stroke-width:30;"
+            points="90,15 90,105"
+        />
+    </svg>
+    </div>
+<div class="flex__item">
+    <h3>Флаг Японии</h3>
+    <svg width="180" height="120">
+        <polyline 
+            style="fill:none;stroke:white;stroke-width:120;"
+            points="0,60 180,60"
+        />
+        <circle cx="90" cy="60" r="30" fill="red" />        
+    </svg>
+</div>
+        </div>
+    </div>
+
+<div class="module">
+    <h2>
+        Задание 2.Сверстайте кнопку, которая будет содержать в себе icon_01 (как в примере в последнем видео). 
+        При клике на кнопку иконка должна меняться на icon_02. Повторный клик меняет иконку обратно.
+    </h2>
+    <div>
+        <a href="./html/index-1.html">Открыть задание</a>
+    </div>
+</div>
+
+<div class="module">
+    <h2>Задание 3.Сверстайте кнопку, клик на которую будет выводить на экран следующие данные:
+        Размеры экрана пользователя (ширина и высота).
+        Координаты местонахождения пользователя. Если пользователь отказался дать доступ 
+        к местоположению или данная функция недоступна в бразуере, вывести вместо координат 
+        сообщение «Информация о местоположении недоступна».
+    </h2>
+    <a href="./html/index-2.html">Открыть задание</a>
+
+</div>
+
+<div class="module">
+    <h2>
+        Задание 4.Сверстайте кнопку, по клику на которую будет отправляться запрос к Timezone API. 
+        В запросе нужно отправить координаты местоположения пользователя, полученные с помощью Geolocation API. 
+        В ответ на запрос придёт объект, из которого нужно вывести на экран следующую информацию:
+        временная зона, в которой находится пользователь: параметр timezone;
+        местные дата и время: параметр date_time_txt.
+        Строка запроса к API выглядит следующим образом:
+        https://api.ipgeolocation.io/timezone?apiKey=32bcd4a6e4b548968e7afcdb682ac679&lat=latitude&long=longitude.
+        Вместо latitude и longitude нужно подставить широту и долготу.
+    </h2>
+    <a href="./html/index-3.html">Открыть задание</a>
+</div>
+
+<div class="module">
+    <h2>Задание 5.Реализовать чат на основе эхо-сервера wss://echo-ws-service.herokuapp.com/
+        Интерфейс состоит из input, куда вводится текст сообщения, и кнопки «Отправить».
+        При клике на кнопку «Отправить» сообщение должно появляться в окне переписки.
+        Эхо-сервер будет отвечать вам тем же сообщением, его также необходимо выводить в чат:
+        Добавить в чат механизм отправки гео-локации:
+        При клике на кнопку «Гео-локация» необходимо отправить данные серверу и в чат вывести 
+        ссылку на https://www.openstreetmap.org/ с вашей гео-локацией. Сообщение, которое отправит 
+        обратно эхо-сервер, не выводить.
+        Удачи!
+    </h2>
+    <a href="./html/index-4.html">Открыть задание</a>
+</div>
+
+</body>
+</html>

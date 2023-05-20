@@ -1,0 +1,156 @@
+/*общие стили*/
+
+body {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+
+
+
+.module {
+    background-color: gainsboro;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/*задание 1*/
+
+.flex {
+    display: flex;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+
+
+/*задание 2*/
+
+button {
+    display: flex;
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    background-color: lightblue;
+    border: none;
+    margin-bottom: 30px;
+}
+
+
+/*Задание 4*/
+.btn {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+  
+    display: flex;
+    margin: 5px 10px;
+    padding: 10px 15px;
+    border-radius: 1px;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: white;
+    background: #315efb;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    box-shadow: 0px 2px 8px 2px rgba(141, 150, 178, 0.3);
+    transform: scale(1.05);
+  }
+
+  /*Задание 5*/
+
+  .wrapper {
+	width: 400px;
+	height: auto;
+	padding: 10px;
+	box-shadow: 5px 5px 5px 5px rgb(134, 134, 134);
+	margin: 20px auto;
+}
+
+.form-chat {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-input {
+	border: 1px solid #797979;
+    padding: 7px 5px;
+	width: 80%;
+	margin-right: 10px;
+	outline: none;
+    border-radius: 10px;
+    height: 30px;
+	
+}
+.form-input:focus {
+	border: 3px solid #b8b8b8;
+}
+
+.form-btn {
+	border: none;
+	background-color: #4284e7;
+	padding: 10px 10px;
+	width: 30%;
+	 cursor: pointer; 
+
+}
+.form-btn:hover {
+	background-color: #dfdfdf;
+}
+
+.wrapper-chat {
+	overflow: auto;
+	border: 1px solid #5c5c5c;
+	padding: 5px;
+	margin-top: 12px;
+	height: 300px;
+    border-radius: 10px;
+}
+ .messages {
+	border: 1px solid #646464;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 7px;
+	align-self: flex-end;
+} 
+
+.user-messages {
+	display: flex;
+	flex-flow: column wrap;
+
+}
+.server-messages, a {
+	cursor: pointer;
+	color: #1a0211;
+	text-decoration: none
+}
+.server-messages:hover, a:hover {
+	color: #6663ff;
+}
+
+.geo-location {
+	margin-left: 6px;
+}
